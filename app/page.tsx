@@ -1,9 +1,11 @@
+import { ModeToggle } from "@/components/theme-toggle";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center h-screen">
         <h1>Learn Build</h1>
+        < ModeToggle />
     </div>
   );
 }
