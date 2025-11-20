@@ -1,6 +1,11 @@
 [build]
-  command = "npm run build"
+  command = "pnpm build"
   publish = ".next"
 
 [[plugins]]
   package = "@netlify/next"
+
+[build.environment]
+  NODE_VERSION = "24"
+  NPM_FLAGS = "--version"
+  PNPM_VERSION = "9"
