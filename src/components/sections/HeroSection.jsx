@@ -37,10 +37,10 @@ export default function HeroSection({ heroY, heroOpacity }) {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-blue-700 leading-tight"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-blue-800 leading-tight"
           >
-            Votre avenir financier{' '}
-            <span className="text-orange-500 block">commence ici</span>
+            Prenez contrôle{' '}
+            <span className="text-orange-500 block">de vos finances</span>
           </motion.h1>
 
           {/* Description */}
@@ -50,7 +50,7 @@ export default function HeroSection({ heroY, heroOpacity }) {
             transition={{ delay: 0.4 }}
             className="text-xl text-blue-600 leading-relaxed max-w-2xl"
           >
-            Plus de 10 ans d'expertise pour protéger et faire croître votre patrimoine avec des solutions financières personnalisées.
+            Faites faire vos impôts par une professionnelle certifiée CPA pour maximiser vos gains dès aujourd’hui!
           </motion.p>
 
           {/* Features Grid */}
@@ -120,7 +120,7 @@ export default function HeroSection({ heroY, heroOpacity }) {
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-blue-100">
               <Award size={80} className="mx-auto text-orange-500 mb-6" />
               <h3 className="text-2xl font-bold text-center mb-4 text-blue-700">Excellence & Confiance</h3>
-              <p className="text-blue-600 text-center text-lg mb-6">10+ ans au service de votre réussite financière</p>
+              <p className="text-blue-600 text-center text-lg mb-6">Un service pensé pour votre réussite financière</p>
               <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-200">
                 <p className="text-sm text-blue-700 text-center italic">
                   « Service professionnel et personnalisé qui a dépassé mes attentes »

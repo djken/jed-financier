@@ -7,37 +7,65 @@ import {
 
 export const services = [
   { 
-    Icon: FileText, 
-    title: "Impôts Particuliers", 
-    price: "25 $", 
-    desc: "Déclarations provinciales et fédérales", 
-    highlight: "500+ déclarations/an" 
-  },
-  { 
-    Icon: Building2, 
-    title: "Impôts Entreprises", 
-    desc: "Optimisation fiscale TPE/PME", 
-    highlight: "Économies garanties" 
-  },
-  { 
-    Icon: TrendingUp, 
-    title: "Planification Financière", 
-    desc: "Stratégies sur mesure à long terme", 
-    highlight: "Objectifs atteints" 
+    Icon: Users, 
+    title: "Assurance vie", 
+    // price: "25 $", 
+    desc: "Garantit un soutien économique à votre famille en cas d’imprévu.", 
+    highlight: "Protection financière pour vos proches" 
   },
   { 
     Icon: Home, 
-    title: "Assurance Habitation", 
-    partner: "Industrielle Alliance", 
-    desc: "Protection complète + rabais exclusifs", 
-    highlight: "Meilleure couverture" 
+    title: "Assurance hypothécaire", 
+    desc: "Protège votre hypothèque en cas de décès, maladie ou incapacité.", 
+    highlight: "Sécurisez votre maison et votre prêt" 
+  },
+  { 
+    Icon: Shield, 
+    title: "Assurance maladie grave", 
+    desc: "Versement forfaitaire en cas de diagnostic d’une maladie grave.", 
+    highlight: "Un soutien lors des moments difficiles" 
+  },
+  { 
+    Icon: Award, 
+    title: "Assurance invalidité", 
+    // partner: "Industrielle Alliance", 
+    desc: "Vous aide à maintenir votre niveau de vie si vous ne pouvez plus travailler.", 
+    highlight: "Revenu assuré en cas d’incapacité" 
+  },
+  { 
+    Icon: Clock, 
+    title: "Assurance auto et habitation", 
+    // products: "REER • REEE • CELI", 
+    desc: "Couverture personnalisée pour votre véhicule et votre résidence.", 
+    highlight: "Protection adaptée à vos biens" 
   },
   { 
     Icon: PiggyBank, 
-    title: "Épargne & Investissements", 
-    products: "REER • REEE • CELI", 
-    desc: "Croissance optimisée avec avantages fiscaux", 
-    highlight: "Rendements supérieurs" 
+    title: "REER – CELI – CELIAPP", 
+    // products: "REER • REEE • CELI", 
+    desc: "Accompagnement pour sélectionner le meilleur produit selon vos objectifs.", 
+    highlight: "Choix du bon compte d’épargne"
+  },
+   { 
+    Icon: FileText, 
+    title: "Préparation d’impôt", 
+    // products: "REER • REEE • CELI", 
+    desc: "Service complet pour particuliers afin de maximiser vos retours.", 
+    highlight: "Déclarations optimisées et conformes" 
+  },
+  { 
+    Icon: Building2, 
+    title: "Impôts pour entreprises (TPS, TVQ, etc.)", 
+    // products: "REER • REEE • CELI", 
+    desc: "Optimisation et conformité pour sociétés, travailleurs autonomes et PME.", 
+    highlight: "Gestion fiscale professionnelle" 
+  },
+   { 
+    Icon: TrendingUp, 
+    title: "Tenue de livres & Préparation des états financiers", 
+    // products: "REER • REEE • CELI", 
+    desc: "États financiers complets, clairs et conformes aux normes.", 
+    highlight: "Rapports fiables pour de meilleures décisions" 
   }
 ];
 

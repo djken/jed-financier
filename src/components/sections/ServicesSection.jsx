@@ -18,13 +18,13 @@ export default function ServicesSection() {
           whileInView={{ opacity: 1, y: 0 }} 
           className="text-center mb-20"
         >
-          <p className="text-orange-600 font-medium uppercase tracking-wider text-sm mb-3">Nos Services</p>
+          <p className="text-orange-600 font-medium uppercase tracking-wider text-4xl mb-3">Nos Services</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-blue-800 mb-4">
             Des solutions sur mesure{' '}
             <span className="text-orange-600">pour chaque besoin</span>
           </h2>
           <p className="text-blue-600 text-lg max-w-2xl mx-auto">
-            Découvrez notre gamme complète de services financiers adaptés à vos objectifs
+            Nous offrons des services de qualité pour la gestion des impôts des particuliers et des entreprises à des tarifs abordables. Avec nous, vous bénéficiez de l'expertise d'un professionnel compétent et vous réalisez des économies significatives sur vos impôts.
           </p>
         </motion.div>
 

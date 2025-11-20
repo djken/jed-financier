@@ -34,7 +34,7 @@ export default function Header({ scrolled, activeSection, isMenuOpen, setIsMenuO
               className={`px-3 py-2 rounded-lg font-medium transition-all duration-300 text-sm ${
                 activeSection === item.id 
                   ? 'text-orange-600 bg-orange-50 border border-orange-100' 
-                  : 'text-blue-800 hover:text-orange-600 hover:bg-gray-50'
+                  : 'text-blue-100 hover:text-orange-600 hover:bg-gray-50'
               }`}
             >
               {item.label}

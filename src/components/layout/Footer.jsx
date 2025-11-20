@@ -7,7 +7,7 @@ import { scrollToSection } from '@/lib/utils';
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-blue-800 to-blue-900 text-white py-16">
+    <footer className="bg-gradient-to-br from-blue-950 to-blue-800 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-4 gap-10">
         {/* Company Info */}
         <div className="md:col-span-2">
