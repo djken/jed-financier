@@ -1,17 +1,37 @@
-// components/layout/Header.jsx
+// components/layout/GlobalHeader.jsx - Header that works on all pages
 
 'use client';
 
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, Calendar } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Logo from '../ui/Logo';
-import { navItems } from '@/lib/data';
-import { scrollToSection } from '@/lib/utils';
 
-export default function Header({ scrolled, activeSection, isMenuOpen, setIsMenuOpen }) {
-  const handleNavigate = (id) => {
-    scrollToSection(id);
-    setIsMenuOpen(false);
+const navItems = [
+  { href: '/', label: 'Accueil' },
+  { href: '/services', label: 'Nos Services' },
+  { href: '/#contact', label: 'Contact' }
+];
+
+export default function GlobalHeader() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 60);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const isActive = (href) => {
+    if (href === '/') return pathname === '/';
+    return pathname.startsWith(href);
   };
 
   return (
@@ -23,22 +43,24 @@ export default function Header({ scrolled, activeSection, isMenuOpen, setIsMenuO
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
-        <Logo onClick={() => scrollToSection('hero')} />
+        <Link href="/">
+          <Logo />
+        </Link>
         
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-6">
           {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => handleNavigate(item.id)}
+            <Link
+              key={item.href}
+              href={item.href}
               className={`px-3 py-2 rounded-lg font-medium transition-all duration-300 text-sm ${
-                activeSection === item.id 
+                isActive(item.href)
                   ? 'text-orange-600 bg-orange-50 border border-orange-100' 
-                  : 'text-blue-100 hover:text-orange-600 hover:bg-gray-50'
+                  : 'text-blue-800 hover:text-orange-600 hover:bg-gray-50'
               }`}
             >
               {item.label}
-            </button>
+            </Link>
           ))}
         </nav>
 
@@ -51,15 +73,15 @@ export default function Header({ scrolled, activeSection, isMenuOpen, setIsMenuO
             <Phone size={16} />
             <span className="font-medium">(514) 746-6986</span>
           </a>
-          <motion.button 
+          <motion.a
+            href="/#contact"
             whileHover={{ scale: 1.02 }} 
             whileTap={{ scale: 0.98 }}
-            onClick={() => handleNavigate('contact')}
             className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-4 py-2.5 rounded-lg font-medium shadow-sm hover:shadow-md flex items-center space-x-2 transition-all border border-transparent"
           >
             <Calendar size={16} />
             <span>Consultation gratuite</span>
-          </motion.button>
+          </motion.a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -82,17 +104,18 @@ export default function Header({ scrolled, activeSection, isMenuOpen, setIsMenuO
           >
             <div className="p-4 space-y-2">
               {navItems.map((item) => (
-                <button 
-                  key={item.id} 
-                  onClick={() => handleNavigate(item.id)} 
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
                   className={`block w-full text-left p-3 rounded-lg font-medium text-sm transition-colors ${
-                    activeSection === item.id 
+                    isActive(item.href)
                       ? 'text-orange-600 bg-orange-50' 
                       : 'text-blue-800 hover:bg-gray-50'
                   }`}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
               <div className="pt-3 border-t border-gray-200">
                 <a 
@@ -102,12 +125,13 @@ export default function Header({ scrolled, activeSection, isMenuOpen, setIsMenuO
                   <Phone size={16} />
                   <span className="font-medium">(514) 746-6986</span>
                 </a>
-                <button 
-                  onClick={() => handleNavigate('contact')} 
-                  className="w-full bg-gradient-to-r from-blue-600 to-orange-500 text-white py-3 rounded-lg font-medium text-sm mt-2"
+                <a
+                  href="/#contact"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block w-full bg-gradient-to-r from-blue-600 to-orange-500 text-white py-3 rounded-lg font-medium text-sm mt-2 text-center"
                 >
                   Consultation gratuite
-                </button>
+                </a>
               </div>
             </div>
           </motion.div>

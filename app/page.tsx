@@ -50,15 +50,6 @@ export default function HomePage() {
 
   return (
     <>
-      <AnimatedBackground />
-      
-      <Header 
-        scrolled={scrolled} 
-        activeSection={activeSection} 
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-      />
-      
       <HeroSection 
         heroY={heroY} 
         heroOpacity={heroOpacity} 
@@ -69,8 +60,6 @@ export default function HomePage() {
       <ServicesSection />
       
       <ContactSection />
-      
-      <Footer />
     </>
   );
 }

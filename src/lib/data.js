@@ -77,9 +77,15 @@ export const stats = [
 ];
 
 export const navItems = [
-  { id: 'hero', label: 'Accueil' },
-  { id: 'services', label: 'Services' },
-  { id: 'contact', label: 'Contact' }
+  { id: 'hero', label: 'Accueil', type: 'scroll' },
+  { id: 'services', label: 'Services', type: 'scroll' },
+  { id: 'contact', label: 'Contact', type: 'scroll' }
+];
+
+export const navItemsWithServicesPage = [
+  { id: '/', label: 'Accueil', type: 'link' },
+  { id: '/services', label: 'Nos Services', type: 'link' },
+  { id: '/#contact', label: 'Contact', type: 'link' }
 ];
 
 export const heroFeatures = [
