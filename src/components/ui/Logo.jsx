@@ -1,9 +1,13 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
+
+const MotionLink = motion(Link);
 
 export default function Logo({ onClick }) {
   return (
-    <motion.div
+    <MotionLink
+      href="/"
       whileHover={{ scale: 1.02 }}
       className="flex items-center space-x-3 cursor-pointer"
       onClick={onClick}
@@ -22,6 +26,6 @@ export default function Logo({ onClick }) {
         <h1 className="text-lg font-bold text-blue-800">JED Services Financiers</h1>
         <p className="text-xs text-gray-600 -mt-1">inc.</p>
       </div>
-    </motion.div>
+    </MotionLink>
   );
 }
