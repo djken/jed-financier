@@ -12,7 +12,7 @@ import Logo from '../ui/Logo';
 const navItems = [
   { href: '/', label: 'Accueil' },
   { href: '/services', label: 'Nos Services' },
-  { href: '/#contact', label: 'Contact' }
+  { href: '/contact', label: 'Contact' }
 ];
 
 export default function GlobalHeader() {

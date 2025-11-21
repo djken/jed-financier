@@ -85,7 +85,7 @@ export const navItems = [
 export const navItemsWithServicesPage = [
   { id: '/', label: 'Accueil', type: 'link' },
   { id: '/services', label: 'Nos Services', type: 'link' },
-  { id: '/#contact', label: 'Contact', type: 'link' }
+  { id: '/contact', label: 'Contact', type: 'link' }
 ];
 
 export const heroFeatures = [

@@ -10,13 +10,26 @@ import { contactInfo } from '@/lib/data';
 export default function ContactSection() {
   return (
     <section id="contact" className="py-28 bg-white">
+
+      {/* bg-gradient-to-br from-blue-50 to-white */}
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="text-5xl md:text-6xl font-bold text-blue-800  mb-16 mt-8"
+            >
+            Contactez <span className="text-orange-500">Nous</span>
+        </motion.h1>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-16">
         {/* Contact Info */}
         <motion.div 
           initial={{ opacity: 0, x: -50 }} 
           whileInView={{ opacity: 1, x: 0 }}
         >
-          <p className="text-orange-600 font-medium uppercase tracking-wider text-sm mb-3">Contactez-nous</p>
+          {/* <p className="text-orange-600 font-medium uppercase tracking-wider text-sm mb-3">Contactez-nous</p> */}
           <h2 className="text-3xl sm:text-4xl font-bold text-blue-800 mb-6">
             Parlons de votre{' '}
             <span className="text-orange-600">avenir financier</span>

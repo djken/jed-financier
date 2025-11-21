@@ -2,13 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useScroll, useTransform } from 'framer-motion';
-import AnimatedBackground from '@/components/layout/AnimatedBackground';
-import Header from '@/components/layout/Header';
-import HeroSection from '@/components/sections/HeroSection';
-import StatsSection from '@/components/sections/StatsSection';
-import ServicesSection from '@/components/sections/ServicesSection';
 import ContactSection from '@/components/layout/ContactSection';
-import Footer from '@/components/layout/Footer';
 import { getActiveSection } from '@/lib/utils';
 
 export default function HomePage() {
@@ -37,15 +31,6 @@ export default function HomePage() {
 
   return (
     <>
-      <HeroSection 
-        heroY={heroY} 
-        heroOpacity={heroOpacity} 
-      />
-      
-      {/* <StatsSection /> */}
-      
-      <ServicesSection />
-      
       <ContactSection />
     </>
   );
