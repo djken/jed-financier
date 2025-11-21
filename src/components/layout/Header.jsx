@@ -73,15 +73,16 @@ export default function GlobalHeader() {
             <Phone size={16} />
             <span className="font-medium">(514) 746-6986</span>
           </a>
-          <motion.a
-            href="/#contact"
-            whileHover={{ scale: 1.02 }} 
-            whileTap={{ scale: 0.98 }}
-            className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-4 py-2.5 rounded-lg font-medium shadow-sm hover:shadow-md flex items-center space-x-2 transition-all border border-transparent"
-          >
-            <Calendar size={16} />
-            <span>Consultation gratuite</span>
-          </motion.a>
+          <Link href="/contact" passHref>
+            <motion.div
+              whileHover={{ scale: 1.02 }} 
+              whileTap={{ scale: 0.98 }}
+              className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-4 py-2.5 rounded-lg font-medium shadow-sm hover:shadow-md flex items-center space-x-2 transition-all border border-transparent cursor-pointer"
+            >
+              <Calendar size={16} />
+              <span>Consultation gratuite</span>
+            </motion.div>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -125,13 +126,13 @@ export default function GlobalHeader() {
                   <Phone size={16} />
                   <span className="font-medium">(514) 746-6986</span>
                 </a>
-                <a
-                  href="/#contact"
+                <Link
+                  href="/contact"
                   onClick={() => setIsMenuOpen(false)}
                   className="block w-full bg-gradient-to-r from-blue-600 to-orange-500 text-white py-3 rounded-lg font-medium text-sm mt-2 text-center"
                 >
                   Consultation gratuite
-                </a>
+                </Link>
               </div>
             </div>
           </motion.div>
