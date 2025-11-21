@@ -4,9 +4,15 @@
 
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight } from 'lucide-react';
-import { scrollToSection } from '@/lib/utils';
+import { useRouter } from 'next/navigation';
 
 export default function ServiceCard({ service, index }) {
+  const router = useRouter();
+
+  const handleLearnMore = () => {
+    router.push('/services');
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -42,13 +48,16 @@ export default function ServiceCard({ service, index }) {
         {service.highlight}
       </p>
       
-      <button 
-        onClick={() => scrollToSection('contact')}
-        className="w-full bg-blue-100 py-3 rounded-lg font-medium text-blue-800 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-orange-500 group-hover:text-white transition-all flex items-center justify-center space-x-2"
-      >
-        <span>En savoir plus</span>
-        <ArrowRight className="group-hover:translate-x-1 transition-transform" size={16} />
-      </button>
+      <button
+      onClick={() => router.push("/contact")}
+      className="cursor-pointer w-full bg-blue-100 py-3 rounded-lg font-medium text-blue-800 
+                group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-orange-500 
+                group-hover:text-white transition-all flex items-center justify-center space-x-2"
+    >
+      <span>En savoir plus</span>
+      <ArrowRight className="group-hover:translate-x-1 transition-transform" size={16} />
+    </button>
+
     </motion.div>
   );
 }
